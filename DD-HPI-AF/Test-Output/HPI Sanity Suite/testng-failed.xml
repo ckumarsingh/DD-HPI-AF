@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [HPI Sanity Suite]">
+  <test thread-count="5" name="HPI Sanity Suite Test Cases(failed)">
+    <classes>
+      <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
+        <methods>
+          <include name="setup"/>
+          <include name="TC07_PFindEnbled"/>
+          <include name="AllWebclose"/>
+          <include name="TC06_PFindDsbled"/>
+        </methods>
+      </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
+    </classes>
+  </test> <!-- HPI Sanity Suite Test Cases(failed) -->
+</suite> <!-- Failed suite [HPI Sanity Suite] -->

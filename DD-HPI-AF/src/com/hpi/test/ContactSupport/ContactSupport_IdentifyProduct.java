@@ -18,7 +18,16 @@ public class ContactSupport_IdentifyProduct extends TestBase {
 @FindBy(linkText="How does HP use product data collected with this service?")
 	WebElement GetProductWikiDoc;
 @FindBy(xpath="//input[@id='search-input-pfinder']")
-	WebElement PfinderSB;
+	WebElement GetPfinderSB;
+@FindBy(xpath="(//button[@id='btnSplitSearchSubmit'])[2]")
+	WebElement GetPfindBtn;
+@FindBy(id="tooltipPadPfinder")
+	WebElement GetTooltipPfinder;
+@FindBy(xpath="//h3[@id='serial-number-modal-main-heading']")
+	WebElement GetPfindrTPTitle;
+@FindBy(xpath="//img[contains(@alt,'Product Number')]")
+	WebElement GetImageProNo;
+
 //Actions
 public String ValidatePageTitle() {
 	String ActualTitle=GetPageTitle.getText();
@@ -40,9 +49,32 @@ public String ValidateSDPageURL() {
 	return SDLink;
 }
 public boolean PfinderSBDs() {
-	boolean PFDs=PfinderSB.isEnabled();
+	boolean PFDs=GetPfinderSB.isEnabled();
 	return PFDs;
 }
-
+public boolean ValidatePfindBtnEn() {
+	boolean PfindFlag=GetPfindBtn.isEnabled();
+	return PfindFlag;
+}
+public void EnterProductPfind() {
+	GetPfinderSB.sendKeys("H6N52AA");
+}
+public void ClickTPPfinder() {
+	GetTooltipPfinder.click();
+}
+public String PfinderTPT ( ) {
+	String TT=GetPfindrTPTitle.getText();
+	return TT;
+}
+public boolean ImageDs() {
+	Boolean Image1 =GetImageProNo.isDisplayed();
+	return Image1;
+}
+public void ClickFind()  {
+	GetPfindBtn.click();
+}
+public void EnterProductNo_Data(String ProductNo) {
+	GetPfinderSB.sendKeys(ProductNo);
+}
 }
 

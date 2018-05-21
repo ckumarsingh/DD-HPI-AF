@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="AllWebclose"/>
-          <include name="TC05_PfinderSBDsplydTest"/>
+          <include name="TC_PN_SNTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </classes>

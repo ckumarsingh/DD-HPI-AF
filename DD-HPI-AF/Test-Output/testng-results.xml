@@ -1,69 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="98779" started-at="2018-05-14T05:49:34Z" finished-at="2018-05-14T05:51:13Z">
+  <suite name="Default suite" duration-ms="26636" started-at="2018-05-21T19:30:46Z" finished-at="2018-05-21T19:31:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="98779" started-at="2018-05-14T05:49:34Z" finished-at="2018-05-14T05:51:13Z">
+    <test name="Default test" duration-ms="26636" started-at="2018-05-21T19:30:46Z" finished-at="2018-05-21T19:31:13Z">
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="setup" is-config="true" duration-ms="15716" started-at="2018-05-14T05:49:34Z" finished-at="2018-05-14T05:49:50Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@52feb982]" name="setup" is-config="true" duration-ms="15422" started-at="2018-05-21T19:30:47Z" finished-at="2018-05-21T19:31:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC01_BtnsDisplayedTest()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="TC01_BtnsDisplayedTest" duration-ms="203" started-at="2018-05-14T05:49:50Z" finished-at="2018-05-14T05:49:50Z">
+        <test-method status="PASS" signature="TC_PN_SNTest(java.lang.String)[pri:9, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@52feb982]" name="TC_PN_SNTest" duration-ms="9726" started-at="2018-05-21T19:31:02Z" data-provider="getTestdata" finished-at="2018-05-21T19:31:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[H6N52AA]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC01_BtnsDisplayedTest -->
-        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="AllWebclose" is-config="true" duration-ms="1113" started-at="2018-05-14T05:49:50Z" finished-at="2018-05-14T05:49:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AllWebclose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="setup" is-config="true" duration-ms="26504" started-at="2018-05-14T05:49:51Z" finished-at="2018-05-14T05:50:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC02_GuestLoginTest()[pri:1, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="TC02_GuestLoginTest" duration-ms="387" started-at="2018-05-14T05:50:18Z" finished-at="2018-05-14T05:50:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC02_GuestLoginTest -->
-        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="AllWebclose" is-config="true" duration-ms="1056" started-at="2018-05-14T05:50:18Z" finished-at="2018-05-14T05:50:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AllWebclose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="setup" is-config="true" duration-ms="16680" started-at="2018-05-14T05:50:19Z" finished-at="2018-05-14T05:50:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC03_ValidateIdntfyNwBtnTest()[pri:2, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="TC03_ValidateIdntfyNwBtnTest" duration-ms="354" started-at="2018-05-14T05:50:36Z" finished-at="2018-05-14T05:50:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC03_ValidateIdntfyNwBtnTest -->
-        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="AllWebclose" is-config="true" duration-ms="1069" started-at="2018-05-14T05:50:36Z" finished-at="2018-05-14T05:50:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AllWebclose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="setup" is-config="true" duration-ms="13105" started-at="2018-05-14T05:50:37Z" finished-at="2018-05-14T05:50:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC04_ClickSDDLinkTest()[pri:3, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="TC04_ClickSDDLinkTest" duration-ms="8771" started-at="2018-05-14T05:50:50Z" finished-at="2018-05-14T05:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC04_ClickSDDLinkTest -->
-        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="AllWebclose" is-config="true" duration-ms="1108" started-at="2018-05-14T05:50:59Z" finished-at="2018-05-14T05:51:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AllWebclose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="setup" is-config="true" duration-ms="11301" started-at="2018-05-14T05:51:00Z" finished-at="2018-05-14T05:51:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC05_PfinderSBEnbldTest()[pri:4, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="TC05_PfinderSBEnbldTest" duration-ms="289" started-at="2018-05-14T05:51:11Z" finished-at="2018-05-14T05:51:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC05_PfinderSBEnbldTest -->
-        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@33c7e1bb]" name="AllWebclose" is-config="true" duration-ms="1092" started-at="2018-05-14T05:51:12Z" finished-at="2018-05-14T05:51:13Z">
+        </test-method> <!-- TC_PN_SNTest -->
+        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@52feb982]" name="AllWebclose" is-config="true" duration-ms="1081" started-at="2018-05-21T19:31:12Z" finished-at="2018-05-21T19:31:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AllWebclose -->
