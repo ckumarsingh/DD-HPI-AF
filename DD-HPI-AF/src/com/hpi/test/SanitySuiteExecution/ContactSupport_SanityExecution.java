@@ -1,35 +1,29 @@
 package com.hpi.test.SanitySuiteExecution;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.hpi.test.ContactSupport.ContactSupport_EntitlementPage;
 import com.hpi.test.ContactSupport.ContactSupport_IdentifyLanding;
+import com.hpi.test.ContactSupport.ContactSupport_IdentifyProduct;
 import com.hpi.test.ParentBase.TestBase;
 import com.hpi.test.util.TestUtil;
-import com.hpi.test.ContactSupport.ContactSupport_IdentifyProduct;
-import com.hpi.test.ContactSupport.ContactSupport_EntitlementPage;
+
 
 public class ContactSupport_SanityExecution extends TestBase {
+
 	
 	ContactSupport_IdentifyLanding ContactSupport_IdentifyLanding;
 	ContactSupport_IdentifyProduct ContactSupport_IdentifyProduct;
 	ContactSupport_EntitlementPage ContactSupport_EntitlementPage;
-	String sheetname= "ProductNo";
-	public ContactSupport_SanityExecution() {
-		super();
-	}
+	
+
 @BeforeMethod
 public void setup() {
 	initialization();
@@ -37,7 +31,19 @@ public void setup() {
 	ContactSupport_IdentifyProduct = new ContactSupport_IdentifyProduct();
 	ContactSupport_EntitlementPage = new ContactSupport_EntitlementPage();
 }
-/*
+@DataProvider
+public Object[][] getTestdata() {
+	String sheetname= "ProductNo";
+	Object data[][]=TestUtil.getTestData(sheetname);
+	return data;
+}
+@DataProvider
+public Object[][] getTestdata1() {
+	String sheetname= "SerialNo";
+	Object data[][]=TestUtil.getTestData(sheetname);
+	return data;
+}
+
 @Test(priority=0)
 public void TC01_BtnsDisplayedTest() {
 	boolean Guestflag=ContactSupport_IdentifyLanding.VerifyGuestBtnDsplyd();
@@ -87,7 +93,7 @@ public void TC06_PFindDsbled() {
 @Test(priority=6)
 public void TC07_PFindEnbled() {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
-	ContactSupport_IdentifyProduct.EnterProductPfind();
+	ContactSupport_IdentifyProduct.EnterProductPfind("H6N52AA");
 	boolean PFindFlag2=ContactSupport_IdentifyProduct.ValidatePfindBtnEn();
 	Assert.assertTrue(PFindFlag2);		
 }
@@ -102,31 +108,58 @@ public void TC08_PfinderTPvalidateTest() throws InterruptedException {
 	Boolean Image2 =ContactSupport_IdentifyProduct.ImageDs();
 	Assert.assertTrue(Image2);	
 }
-*/
-/*@Test(priority=8)
+
+@Test(priority=8)
 public void TC_EP_PNameTest() throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
-	ContactSupport_IdentifyProduct.EnterProductPfind();
-	Thread.sleep(3000);
+	ContactSupport_IdentifyProduct.EnterProductPfind("HP ENVY Recline 23-k001hk TouchSmart All-in-One Desktop PC (ENERGY STAR)");
 	ContactSupport_IdentifyProduct.ClickFind();
-	Thread.sleep(10000);
+	Thread.sleep(5000);
 	String P2=ContactSupport_EntitlementPage.EntitlementPageTitle();
 	Assert.assertEquals(P2, "HP Customer Support - Verify entitlement");
-}*/
-@DataProvider
-public Object[][] getTestdata() {
-	Object data[][]=TestUtil.getTestData(sheetname);
-	return data;
+}
+@Test(priority=9)
+public void TC_EP_SNOTest() throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind("4CS34503K1");
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(5000);
+	String P2=ContactSupport_EntitlementPage.EntitlementPageTitle();
+	Assert.assertEquals(P2, "HP Customer Support - Verify entitlement");
+}
+@Test(priority=10)
+public void TC_EP_PNTest() throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind("H6N52AA");
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(5000);
+	String P2=ContactSupport_EntitlementPage.EntitlementPageTitle();
+	Assert.assertEquals(P2, "HP Customer Support - Verify entitlement");
 }
 
-@Test(priority=9,dataProvider="getTestdata")
-public void TC_PN_SNTest(String ProductNo) {
+
+@Test(priority=11,dataProvider="getTestdata")
+	public void TC_PN_SNTest(String ProductNo) {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
-	ContactSupport_IdentifyProduct.EnterProductNo_Data(ProductNo);
+	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
 	String T1= ContactSupport_EntitlementPage.GetTitle4Product();
 	//Assert.assertTrue(T1);
 	System.out.println("The string is: " + T1);
+	boolean B2=ContactSupport_EntitlementPage.SrnoDs();
+	Assert.assertTrue(B2);
+}
+@Test(priority=12,dataProvider="getTestdata1")
+	public void TC_SNTest(String SerialNo) {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	String T1= ContactSupport_EntitlementPage.GetTitle4Product();
+	Assert.assertEquals(T1, "");
+	//Assert.assertTrue(T1);
+	System.out.println(T1);
+	boolean B3=ContactSupport_EntitlementPage.SrnoDs();
+	Assert.assertFalse(B3);
 }
 
 @AfterMethod
@@ -134,5 +167,12 @@ public void AllWebclose() {
 	driver.quit();
 }
 
+
+
+	
+	
+	
 }
+
+
 

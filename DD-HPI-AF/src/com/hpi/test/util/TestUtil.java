@@ -24,7 +24,7 @@ public class TestUtil extends TestBase {
 	static Sheet sheet;
 	
 	
-	public static Object[][] getTestData(String sheetName) {
+	public static Object[][] getTestData(String sheetname) {
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
@@ -38,7 +38,7 @@ public class TestUtil extends TestBase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		sheet = book.getSheet(sheetName);
+		sheet = book.getSheet(sheetname);
 		Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 		// System.out.println(sheet.getLastRowNum() + "--------" +
 		// sheet.getRow(0).getLastCellNum());

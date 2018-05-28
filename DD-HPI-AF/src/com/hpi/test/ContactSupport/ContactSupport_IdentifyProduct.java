@@ -56,8 +56,8 @@ public boolean ValidatePfindBtnEn() {
 	boolean PfindFlag=GetPfindBtn.isEnabled();
 	return PfindFlag;
 }
-public void EnterProductPfind() {
-	GetPfinderSB.sendKeys("H6N52AA");
+public void EnterProductPfind(String Prdtdtls) {
+	GetPfinderSB.sendKeys(Prdtdtls);
 }
 public void ClickTPPfinder() {
 	GetTooltipPfinder.click();
@@ -66,15 +66,13 @@ public String PfinderTPT ( ) {
 	String TT=GetPfindrTPTitle.getText();
 	return TT;
 }
-public boolean ImageDs() {
+public boolean ImageDs() { 
 	Boolean Image1 =GetImageProNo.isDisplayed();
 	return Image1;
 }
 public void ClickFind()  {
 	GetPfindBtn.click();
 }
-public void EnterProductNo_Data(String ProductNo) {
-	GetPfinderSB.sendKeys(ProductNo);
-}
+
 }
 
