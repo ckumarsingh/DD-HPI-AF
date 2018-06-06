@@ -24,6 +24,16 @@ public class ContactSupport_EntitlementPage extends TestBase {
 	WebElement GetlanguageSupport;
 @FindBy(id="btnWShowOptions")
 	WebElement GetShowOptions;
+@FindBy(id="wFormSerialNumber")
+	WebElement GetSerialEditBox;
+@FindBy(id="status-key")
+	WebElement GetwarrantyTag;
+@FindBy(xpath="//span[@class='key serialProdNumBld'][text()='Serial number:']")
+	WebElement GetSerialNoTag;
+@FindBy(xpath="//span[@class='key serialProdNumBld'][text()='Product number:']")
+	WebElement GetProductNoTag;
+@FindBy(id="btnWShowOptions")
+	WebElement GetShowButton;
 
 
 public String EntitlementPageTitle() {
@@ -42,4 +52,26 @@ public boolean SrnoDs() {
 	boolean B1=GetSerialNo.isDisplayed();
 	return B1;
 }
+public boolean WarrantyTagDs( ) {
+	boolean W1=GetwarrantyTag.isDisplayed();
+	return W1;
 }
+public boolean SerialTagDs() {
+	boolean S1=GetSerialNoTag.isDisplayed();
+	return S1;
+}
+public boolean ProductTag() {
+	boolean P1=GetProductNoTag.isDisplayed();
+	return P1;
+}
+public boolean ShowbtnEnld() {
+	boolean S3=GetShowButton.isEnabled();
+	return S3;
+}
+
+public void ShowButtonClick() {
+	GetShowButton.click();
+}
+
+}
+

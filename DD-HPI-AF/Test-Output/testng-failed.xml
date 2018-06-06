@@ -6,8 +6,7 @@
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
         <methods>
           <include name="setup"/>
-          <include name="AllWebclose"/>
-          <include name="TC04_ClickSDDLinkTest"/>
+          <include name="TC_SN_ConOptTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </classes>

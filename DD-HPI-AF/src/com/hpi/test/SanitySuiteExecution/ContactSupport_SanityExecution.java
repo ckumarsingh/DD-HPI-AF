@@ -43,6 +43,12 @@ public Object[][] getTestdata1() {
 	Object data[][]=TestUtil.getTestData(sheetname);
 	return data;
 }
+@DataProvider
+public Object[][] getTestdata2() {
+	String sheetname= "ProductName";
+	Object data[][]=TestUtil.getTestData(sheetname);
+	return data;
+}
 
 @Test(priority=0)
 public void TC01_BtnsDisplayedTest() {
@@ -113,6 +119,7 @@ public void TC08_PfinderTPvalidateTest() throws InterruptedException {
 public void TC_EP_PNameTest() throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind("HP ENVY Recline 23-k001hk TouchSmart All-in-One Desktop PC (ENERGY STAR)");
+	Thread.sleep(2000);
 	ContactSupport_IdentifyProduct.ClickFind();
 	Thread.sleep(5000);
 	String P2=ContactSupport_EntitlementPage.EntitlementPageTitle();
@@ -137,9 +144,8 @@ public void TC_EP_PNTest() throws InterruptedException {
 	Assert.assertEquals(P2, "HP Customer Support - Verify entitlement");
 }
 
-
 @Test(priority=11,dataProvider="getTestdata")
-	public void TC_PN_SNTest(String ProductNo) {
+public void TC_PN_SNTest(String ProductNo) {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -150,26 +156,72 @@ public void TC_EP_PNTest() throws InterruptedException {
 	Assert.assertTrue(B2);
 }
 @Test(priority=12,dataProvider="getTestdata1")
-	public void TC_SNTest(String SerialNo) {
+public void TC_SNTest(String SerialNo) {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
 	ContactSupport_IdentifyProduct.ClickFind();
 	String T1= ContactSupport_EntitlementPage.GetTitle4Product();
-	Assert.assertEquals(T1, "");
+	//Assert.assertEquals(T1, "");
 	//Assert.assertTrue(T1);
 	System.out.println(T1);
 	boolean B3=ContactSupport_EntitlementPage.SrnoDs();
 	Assert.assertFalse(B3);
+	
 }
+@Test(priority=13,dataProvider="getTestdata1")
+public void TC_SN_WDTest(String SerialNo) throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(10000);
+	boolean W2=ContactSupport_EntitlementPage.WarrantyTagDs();
+	Assert.assertTrue(W2); //Verifying Warranty Tag
+	boolean S2=ContactSupport_EntitlementPage.SerialTagDs();
+	Assert.assertTrue(S2); //Verifying Serial Tag
+	boolean P1=ContactSupport_EntitlementPage.ProductTag();
+	Assert.assertTrue(P1); //Verifying Product Tag
+}
+@Test(priority=14,dataProvider="getTestdata")
+public void TC_PN_WDTest(String ProductNo) throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(10000);
+	boolean W2=ContactSupport_EntitlementPage.WarrantyTagDs();
+	Assert.assertFalse(W2); //Verifying Warranty Tag
+	boolean S2=ContactSupport_EntitlementPage.SerialTagDs();
+	Assert.assertFalse(S2); //Verifying Serial Tag
+	boolean P1=ContactSupport_EntitlementPage.ProductTag();
+	Assert.assertFalse(P1); //Verifying Product Tag
+}
+@Test(priority=15,dataProvider="getTestdata1")
+public void TC_SN_ConOptTest(String SerialNo) throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(7000);
+	boolean S4=ContactSupport_EntitlementPage.ShowbtnEnld();
+	Assert.assertTrue(S4);
+	ContactSupport_EntitlementPage.ShowButtonClick();
+}
+@Test(priority=16,dataProvider="getTestdata" )
+public void TC_PN_ConOptTest(String ProductNo) throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(7000);
+	boolean S4=ContactSupport_EntitlementPage.ShowbtnEnld();
+	Assert.assertFalse(S4);
+	//ContactSupport_EntitlementPage.ShowButtonClick();
+}
+
 
 @AfterMethod
 public void AllWebclose() {
 	driver.quit();
+	
 }
 
-
-
-	
 	
 	
 }
