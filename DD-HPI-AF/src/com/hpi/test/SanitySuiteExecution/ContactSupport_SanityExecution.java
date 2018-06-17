@@ -2,13 +2,15 @@ package com.hpi.test.SanitySuiteExecution;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
+import org.openqa.selenium.JavascriptExecutor;
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.hpi.test.ContactSupport.ContactSupport_EntitlementPage;
 import com.hpi.test.ContactSupport.ContactSupport_IdentifyLanding;
 import com.hpi.test.ContactSupport.ContactSupport_IdentifyProduct;
@@ -49,6 +51,12 @@ public Object[][] getTestdata2() {
 	Object data[][]=TestUtil.getTestData(sheetname);
 	return data;
 }
+@DataProvider
+public Object[][] getTestdata3() {
+	String sheetname= "PN_SN";
+	Object data[][]=TestUtil.getTestData(sheetname);
+	return data;
+}
 
 @Test(priority=0)
 public void TC01_BtnsDisplayedTest() {
@@ -73,8 +81,9 @@ public void TC03_ValidateIdntfyNwBtnTest() {
 	Assert.assertTrue(En);
 }
 @Test(priority=3)
-public void TC04_ClickSDDLinkTest() {
+public void TC04_ClickSDDLinkTest()  {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
+	((JavascriptExecutor)driver).executeScript("scroll(0,200)");
 	String SDLink1=ContactSupport_IdentifyProduct.ValidateSDPageURL();
 	Assert.assertEquals(SDLink1, "https://uat.support.hp.com/us-en/document/c05061199");
 	ContactSupport_IdentifyProduct.ClickWikiHowLink();
@@ -195,26 +204,68 @@ public void TC_PN_WDTest(String ProductNo) throws InterruptedException {
 	Assert.assertFalse(P1); //Verifying Product Tag
 }
 @Test(priority=15,dataProvider="getTestdata1")
+public void TC_SN_ConOptBtnTest(String SerialNo) throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(7000);
+	((JavascriptExecutor)driver).executeScript("scroll(0,450)");
+	boolean S4=ContactSupport_EntitlementPage.ShowbtnEnld();
+	Assert.assertTrue(S4); //Verifying ShowButton Enabled
+	
+}
+@Test(priority=16,dataProvider="getTestdata1")
 public void TC_SN_ConOptTest(String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
 	ContactSupport_IdentifyProduct.ClickFind();
 	Thread.sleep(7000);
-	boolean S4=ContactSupport_EntitlementPage.ShowbtnEnld();
-	Assert.assertTrue(S4);
+	((JavascriptExecutor)driver).executeScript("scroll(0,450)");
 	ContactSupport_EntitlementPage.ShowButtonClick();
+	boolean PS2=ContactSupport_EntitlementPage.PhoneSupportBtnDs();
+	boolean EF1=ContactSupport_EntitlementPage.EmailFormBtnDs();
+	boolean F2=ContactSupport_EntitlementPage.ForumBtnDs();
+	boolean SC2=ContactSupport_EntitlementPage.ServiceCenterBtnDs();
+	Assert.assertTrue(PS2); //Verifying PhoneSupport Button displayed
+	Assert.assertTrue(EF1);	//Verifying Email Form Button displayed
+	Assert.assertTrue(F2);	//Verifying Forum Button displayed
+	Assert.assertTrue(SC2);	//Verifying service center Button displayed
+	
 }
-@Test(priority=16,dataProvider="getTestdata" )
-public void TC_PN_ConOptTest(String ProductNo) throws InterruptedException {
+
+@Test(priority=17,dataProvider="getTestdata3" )
+public void TC_PN_ConOptBtnTest(String ProductNo, String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
 	Thread.sleep(7000);
+	((JavascriptExecutor)driver).executeScript("scroll(0,450)");
 	boolean S4=ContactSupport_EntitlementPage.ShowbtnEnld();
-	Assert.assertFalse(S4);
-	//ContactSupport_EntitlementPage.ShowButtonClick();
+	boolean S5=ContactSupport_EntitlementPage.ShowbtnEnld();
+	Assert.assertFalse(S4); //Verifying ShowButton Disabled
+	ContactSupport_EntitlementPage.EnterSrNo(SerialNo);
+	Thread.sleep(2000);
+	//Assert.assertTrue(S5); //Verifying ShowButton Enabled
 }
-
+@Test(priority=18,dataProvider="getTestdata3" )
+public void TC_PN_ConOptTest(String ProductNo, String SerialNo) throws InterruptedException {
+	ContactSupport_IdentifyLanding.ClickOnGuest();
+	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
+	ContactSupport_IdentifyProduct.ClickFind();
+	Thread.sleep(7000);
+	((JavascriptExecutor)driver).executeScript("scroll(0,450)");
+	ContactSupport_EntitlementPage.EnterSrNo(SerialNo);
+	ContactSupport_EntitlementPage.ShowButtonClick();
+	boolean PS2=ContactSupport_EntitlementPage.PhoneSupportBtnDs();
+	boolean EF1=ContactSupport_EntitlementPage.EmailFormBtnDs();
+	boolean F2=ContactSupport_EntitlementPage.ForumBtnDs();
+	boolean SC2=ContactSupport_EntitlementPage.ServiceCenterBtnDs();
+	Assert.assertTrue(PS2); //Verifying PhoneSupport Button displayed
+	Assert.assertTrue(EF1);	//Verifying Email Form Button displayed
+	Assert.assertTrue(F2);	//Verifying Forum Button displayed
+	Assert.assertTrue(SC2);	//Verifying service center Button displayed
+}	
+	
 
 @AfterMethod
 public void AllWebclose() {

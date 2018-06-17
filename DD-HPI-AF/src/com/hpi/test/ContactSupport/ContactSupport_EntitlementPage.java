@@ -34,6 +34,15 @@ public class ContactSupport_EntitlementPage extends TestBase {
 	WebElement GetProductNoTag;
 @FindBy(id="btnWShowOptions")
 	WebElement GetShowButton;
+@FindBy(id="getPhoneSupport")
+	WebElement GetPhoneSupport;
+@FindBy(id="getEmailForm")
+	WebElement GetEmailForm;
+@FindBy(id="Forum")
+	WebElement GetForum;
+@FindBy(id="ServiceCenter")
+	WebElement GetServiceCenter;
+
 
 
 public String EntitlementPageTitle() {
@@ -71,6 +80,25 @@ public boolean ShowbtnEnld() {
 
 public void ShowButtonClick() {
 	GetShowButton.click();
+}
+public void EnterSrNo(String SN) {
+	GetSerialNo.sendKeys(SN);
+}
+public boolean PhoneSupportBtnDs () {
+	boolean PS1=GetPhoneSupport.isDisplayed();
+	return PS1;
+}
+public boolean EmailFormBtnDs () {
+	boolean EF1=GetEmailForm.isDisplayed();
+	return EF1;
+}
+public boolean ForumBtnDs () {
+	boolean F1=GetForum.isDisplayed();
+	return F1;
+}
+public boolean ServiceCenterBtnDs () {
+	boolean SC1=GetServiceCenter.isDisplayed();
+	return SC1;
 }
 
 }

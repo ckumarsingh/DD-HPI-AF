@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="16" total="17" passed="1">
+<testng-results skipped="0" failed="0" ignored="18" total="19" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32337" started-at="2018-06-06T17:27:29Z" finished-at="2018-06-06T17:28:02Z">
+  <suite name="Default suite" duration-ms="34336" started-at="2018-06-17T18:22:47Z" finished-at="2018-06-17T18:23:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32337" started-at="2018-06-06T17:27:29Z" finished-at="2018-06-06T17:28:02Z">
+    <test name="Default test" duration-ms="34336" started-at="2018-06-17T18:22:47Z" finished-at="2018-06-17T18:23:21Z">
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@3043fe0e]" name="setup" is-config="true" duration-ms="14876" started-at="2018-06-06T17:27:30Z" finished-at="2018-06-06T17:27:45Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26]" name="setup" is-config="true" duration-ms="14958" started-at="2018-06-17T18:22:47Z" finished-at="2018-06-17T18:23:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC_SN_ConOptTest(java.lang.String)[pri:15, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@3043fe0e]" name="TC_SN_ConOptTest" duration-ms="17009" started-at="2018-06-06T17:27:45Z" data-provider="getTestdata1" finished-at="2018-06-06T17:28:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4CS34503K1]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="TC_EP_PNameTest()[pri:8, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26]" name="TC_EP_PNameTest" duration-ms="18274" started-at="2018-06-17T18:23:02Z" finished-at="2018-06-17T18:23:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_SN_ConOptTest -->
+        </test-method> <!-- TC_EP_PNameTest -->
+        <test-method status="PASS" signature="AllWebclose()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26]" name="AllWebclose" is-config="true" duration-ms="1081" started-at="2018-06-17T18:23:20Z" finished-at="2018-06-17T18:23:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AllWebclose -->
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

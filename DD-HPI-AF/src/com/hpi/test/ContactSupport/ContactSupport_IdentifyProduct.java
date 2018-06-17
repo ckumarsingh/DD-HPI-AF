@@ -28,12 +28,14 @@ public class ContactSupport_IdentifyProduct extends TestBase {
 @FindBy(xpath="//img[contains(@alt,'Product Number')]")
 	WebElement GetImageProNo;
 
+
 //Actions
 public String ValidatePageTitle() {
 	String ActualTitle=GetPageTitle.getText();
 	return ActualTitle;
 }
 public void ClickWikiHowLink() {
+	//scrollIntoView(waitForElement(GetProductWikiDoc.click()));
 	GetProductWikiDoc.click();
 }
 public boolean ValidateIdntfyNowBtnEn() {
@@ -73,6 +75,7 @@ public boolean ImageDs() {
 public void ClickFind()  {
 	GetPfindBtn.click();
 }
+
 
 }
 
