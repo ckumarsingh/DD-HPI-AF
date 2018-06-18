@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -100,13 +101,13 @@ public void TC05_PfinderSBEnbldTest() {
 	Assert.assertTrue(PFEn1);
 }
 @Test(priority=5)
-public void TC06_PFindDsbled() {
+public void TC06_PFindDsbledTest() {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	boolean PFindFlag1=ContactSupport_IdentifyProduct.ValidatePfindBtnEn();
 	Assert.assertFalse(PFindFlag1);
 }
 @Test(priority=6)
-public void TC07_PFindEnbled() {
+public void TC07_PFindEnbledTest() {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind("H6N52AA");
 	boolean PFindFlag2=ContactSupport_IdentifyProduct.ValidatePfindBtnEn();
@@ -125,7 +126,7 @@ public void TC08_PfinderTPvalidateTest() throws InterruptedException {
 }
 
 @Test(priority=8)
-public void TC_EP_PNameTest() throws InterruptedException {
+public void TC09_EP_PNameTest() throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind("HP ENVY Recline 23-k001hk TouchSmart All-in-One Desktop PC (ENERGY STAR)");
 	Thread.sleep(2000);
@@ -135,7 +136,7 @@ public void TC_EP_PNameTest() throws InterruptedException {
 	Assert.assertEquals(P2, "HP Customer Support - Verify entitlement");
 }
 @Test(priority=9)
-public void TC_EP_SNOTest() throws InterruptedException {
+public void TC10_EP_SNOTest() throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind("4CS34503K1");
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -144,7 +145,7 @@ public void TC_EP_SNOTest() throws InterruptedException {
 	Assert.assertEquals(P2, "HP Customer Support - Verify entitlement");
 }
 @Test(priority=10)
-public void TC_EP_PNTest() throws InterruptedException {
+public void TC11_EP_PNTest() throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind("H6N52AA");
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -154,7 +155,7 @@ public void TC_EP_PNTest() throws InterruptedException {
 }
 
 @Test(priority=11,dataProvider="getTestdata")
-public void TC_PN_SNTest(String ProductNo) {
+public void TC12_PN_SNTest(String ProductNo) {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -165,7 +166,7 @@ public void TC_PN_SNTest(String ProductNo) {
 	Assert.assertTrue(B2);
 }
 @Test(priority=12,dataProvider="getTestdata1")
-public void TC_SNTest(String SerialNo) {
+public void TC13_SNTest(String SerialNo) {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -178,7 +179,7 @@ public void TC_SNTest(String SerialNo) {
 	
 }
 @Test(priority=13,dataProvider="getTestdata1")
-public void TC_SN_WDTest(String SerialNo) throws InterruptedException {
+public void TC14_SN_WDTest(String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -191,7 +192,7 @@ public void TC_SN_WDTest(String SerialNo) throws InterruptedException {
 	Assert.assertTrue(P1); //Verifying Product Tag
 }
 @Test(priority=14,dataProvider="getTestdata")
-public void TC_PN_WDTest(String ProductNo) throws InterruptedException {
+public void TC15_PN_WDTest(String ProductNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -204,7 +205,7 @@ public void TC_PN_WDTest(String ProductNo) throws InterruptedException {
 	Assert.assertFalse(P1); //Verifying Product Tag
 }
 @Test(priority=15,dataProvider="getTestdata1")
-public void TC_SN_ConOptBtnTest(String SerialNo) throws InterruptedException {
+public void TC16_SN_ConOptBtnTest(String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -215,7 +216,7 @@ public void TC_SN_ConOptBtnTest(String SerialNo) throws InterruptedException {
 	
 }
 @Test(priority=16,dataProvider="getTestdata1")
-public void TC_SN_ConOptTest(String SerialNo) throws InterruptedException {
+public void TC17_SN_ConOptTest(String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(SerialNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -234,7 +235,7 @@ public void TC_SN_ConOptTest(String SerialNo) throws InterruptedException {
 }
 
 @Test(priority=17,dataProvider="getTestdata3" )
-public void TC_PN_ConOptBtnTest(String ProductNo, String SerialNo) throws InterruptedException {
+public void TC18_PN_ConOptBtnTest(String ProductNo, String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -248,7 +249,7 @@ public void TC_PN_ConOptBtnTest(String ProductNo, String SerialNo) throws Interr
 	//Assert.assertTrue(S5); //Verifying ShowButton Enabled
 }
 @Test(priority=18,dataProvider="getTestdata3" )
-public void TC_PN_ConOptTest(String ProductNo, String SerialNo) throws InterruptedException {
+public void TC19_PN_ConOptTest(String ProductNo, String SerialNo) throws InterruptedException {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
 	ContactSupport_IdentifyProduct.EnterProductPfind(ProductNo);
 	ContactSupport_IdentifyProduct.ClickFind();
@@ -267,12 +268,18 @@ public void TC_PN_ConOptTest(String ProductNo, String SerialNo) throws Interrupt
 }	
 	
 
-@AfterMethod
+/*@AfterMethod
 public void AllWebclose() {
+	driver.quit();	
+}*/
+@AfterMethod
+public void screenshot(ITestResult result) {
+	if(ITestResult.FAILURE==result.getStatus())
+	{
+		captureScreenshot(driver, result.getName());
+	}
 	driver.quit();
-	
 }
-
 	
 	
 }

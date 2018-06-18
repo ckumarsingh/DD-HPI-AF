@@ -6,13 +6,17 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import java.io.File;
 
 public class TestBase {
 	
@@ -39,5 +43,17 @@ public class TestBase {
 		return waitForElement(object);
 
 }
-	
+	public static void captureScreenshot (WebDriver driver, String ScreenshotName) 
+	{
+			try 
+			{
+				TakesScreenshot ts=((TakesScreenshot)driver);
+				File SrcFile=ts.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFileToDirectory(SrcFile, new File("./Error-Screenshots"));
+				System.out.println("Screenshot taken");
+			}
+			catch (Exception e)
+			{
+		}
+	}					
 }

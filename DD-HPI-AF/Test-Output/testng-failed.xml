@@ -5,9 +5,9 @@
     <classes>
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
         <methods>
+          <include name="TC09_EP_PNameTest"/>
           <include name="setup"/>
-          <include name="AllWebclose"/>
-          <include name="TC_EP_PNameTest"/>
+          <include name="screenshot"/>
         </methods>
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </classes>
