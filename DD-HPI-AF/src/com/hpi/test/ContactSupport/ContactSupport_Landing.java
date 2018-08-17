@@ -28,4 +28,8 @@ public boolean VerifySignInBtnDsplyd() {
 public void ClickOnGuest() {
 	GetContinueAsGuest.click();
 }
+
+public void TestClick() {
+	GetContinueAsGuest.click();
+}
 }
