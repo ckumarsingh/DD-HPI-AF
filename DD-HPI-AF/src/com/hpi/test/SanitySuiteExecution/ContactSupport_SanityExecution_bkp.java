@@ -19,7 +19,7 @@ import com.hpi.test.ParentBase.TestBase;
 import com.hpi.test.util.TestUtil;
 
 
-public class ContactSupport_SanityExecution_del extends TestBase {
+public class ContactSupport_SanityExecution_bkp extends TestBase {
 
 	
 	ContactSupport_Landing ContactSupport_Landing;

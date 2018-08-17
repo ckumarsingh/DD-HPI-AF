@@ -49,7 +49,15 @@ WebElement GetVideoOthers;
 WebElement GetKeyBoardlablel;
 @FindBy (xpath="//h4[@class='col-lg-24 carouselHeading']")
 WebElement GetCarouselHeadOthers;
+@FindBy (xpath="//h4[@class='col-lg-21 swdPfinderTitle swdPfinderTitle-with-DMD']")
+WebElement GetSPPTag;
+@FindBy (xpath="//div[@class='contactPfinderTitle']")
+WebElement GetAppTag;
+@FindBy (id="btnTMSDDSubmit")
+WebElement GetOtherSubmitBtn;
 
+
+//Actions
 public String EntitlementPageTitle() {
 	String P1=GetEntitlementPageTitle.getText();
 	return P1;
