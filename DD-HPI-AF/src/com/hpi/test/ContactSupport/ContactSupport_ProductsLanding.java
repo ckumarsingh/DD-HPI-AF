@@ -6,44 +6,49 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hpi.test.ParentBase.TestBase;
 
-public class ContactSupport_EntitlementPage extends TestBase {
-	public ContactSupport_EntitlementPage( ) {
+public class ContactSupport_ProductsLanding extends TestBase {
+	public ContactSupport_ProductsLanding( ) {
 		PageFactory.initElements(driver, this);
 	}
-@FindBy(id="hpProductContextPageTitle")	
-	WebElement GetEntitlementPageTitle;
-@FindBy(id="entitlementHeadingForSerial")
-	WebElement GetTitle4ProdctNo;
-@FindBy(id="entitlementHeadingForProduct")
-	WebElement GetTitle4Serial;
-@FindBy(id="wFormSerialNumber")
-	WebElement GetSerialNo;
-@FindBy(id="wFormProductLocation_dd_headerValue")
-	WebElement GetLocation;
-@FindBy(id="wFormLanguage_dd_headerValue")
-	WebElement GetlanguageSupport;
-@FindBy(id="btnWShowOptions")
-	WebElement GetShowOptions;
-@FindBy(id="wFormSerialNumber")
-	WebElement GetSerialEditBox;
-@FindBy(id="status-key")
-	WebElement GetwarrantyTag;
-@FindBy(xpath="//span[@class='key serialProdNumBld'][text()='Serial number:']")
-	WebElement GetSerialNoTag;
-@FindBy(xpath="//span[@class='key serialProdNumBld'][text()='Product number:']")
-	WebElement GetProductNoTag;
-@FindBy(id="btnWShowOptions")
-	WebElement GetShowButton;
-@FindBy(id="getPhoneSupport")
-	WebElement GetPhoneSupport;
-@FindBy(id="getEmailForm")
-	WebElement GetEmailForm;
-@FindBy(id="Forum")
-	WebElement GetForum;
-@FindBy(id="ServiceCenter")
-	WebElement GetServiceCenter;
-
-
+	
+//PageFactory--WebElements
+	
+@FindBy(id="productImgEnabledlaptop")	
+WebElement GetLaptopIcon;
+@FindBy(id="productImgEnableddesktop")
+WebElement GetDesktopIcon;
+@FindBy(id="productImgEnabledprinter")
+WebElement GetPrintersIcon;
+@FindBy(id="productImgEnabledother")
+WebElement GetOthersIcon;
+@FindBy(id="detect-now-SWD")
+WebElement GetDMDButton;
+@FindBy(tagName="h2")
+WebElement GetProductTitle;
+@FindBy(id="find-out-more-swd")
+WebElement GetFindoutMoreLink;
+@FindBy (xpath="//h4[@class='col-lg-21 swdPfinderTitle swdPfinderTitle-with-DMD']")
+WebElement GetSNTag;
+@FindBy (id="search-input-pfinder")
+WebElement GetSNBox;
+@FindBy (id="btnSplitSearchSubmit")
+WebElement GetSubmitBtn;
+@FindBy (xpath="//h4[@class='col-lg-24 carouselHeading']")
+WebElement GetCarouselHead;
+@FindBy (id="contact_tooltip_labelinfo")
+WebElement GetLabelProductInfo;
+@FindBy (id="tooltip_video_printer")
+WebElement GetVideoLinkPrinter;
+@FindBy (id="tooltip_video_laptop")
+WebElement GetVideoLinkLaptop;
+@FindBy (id="tooltip_video_desktop")
+WebElement GetVideoLinkDesktop;
+@FindBy (id="tooltip_video_others")
+WebElement GetVideoOthers;
+@FindBy (id="contact_tooltip_keyboard_desktop")
+WebElement GetKeyBoardlablel;
+@FindBy (xpath="//h4[@class='col-lg-24 carouselHeading']")
+WebElement GetCarouselHeadOthers;
 
 public String EntitlementPageTitle() {
 	String P1=GetEntitlementPageTitle.getText();

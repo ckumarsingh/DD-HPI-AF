@@ -12,9 +12,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
-import com.hpi.test.ContactSupport.ContactSupport_EntitlementPage;
-import com.hpi.test.ContactSupport.ContactSupport_IdentifyLanding;
-import com.hpi.test.ContactSupport.ContactSupport_IdentifyProduct;
+import com.hpi.test.ContactSupport.ContactSupport_Landing;
+import com.hpi.test.ContactSupport.ContactSupport_ProductsLanding;
+import com.hpi.test.ContactSupport.ContactSupport_SupportOptions;
 import com.hpi.test.ParentBase.TestBase;
 import com.hpi.test.util.TestUtil;
 
@@ -22,17 +22,17 @@ import com.hpi.test.util.TestUtil;
 public class ContactSupport_SanityExecution extends TestBase {
 
 	
-	ContactSupport_IdentifyLanding ContactSupport_IdentifyLanding;
-	ContactSupport_IdentifyProduct ContactSupport_IdentifyProduct;
-	ContactSupport_EntitlementPage ContactSupport_EntitlementPage;
+	ContactSupport_Landing ContactSupport_Landing;
+	ContactSupport_ProductsLanding ContactSupport_ProductsLanding;
+	ContactSupport_SupportOptions ContactSupport_SupportOptions;
 	
 
 @BeforeMethod
 public void setup() {
 	initialization();
-	ContactSupport_IdentifyLanding = new ContactSupport_IdentifyLanding();
-	ContactSupport_IdentifyProduct = new ContactSupport_IdentifyProduct();
-	ContactSupport_EntitlementPage = new ContactSupport_EntitlementPage();
+	ContactSupport_Landing = new ContactSupport_Landing();
+	ContactSupport_ProductsLanding = new ContactSupport_ProductsLanding();
+	ContactSupport_SupportOptions = new ContactSupport_SupportOptions();
 }
 @DataProvider
 public Object[][] getTestdata() {

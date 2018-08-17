@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hpi.test.ParentBase.TestBase;
 
-public class ContactSupport_IdentifyLanding extends TestBase {
-		public ContactSupport_IdentifyLanding () {
+public class ContactSupport_Landing extends TestBase {
+		public ContactSupport_Landing () {
 			PageFactory.initElements(driver, this);
 				}
 //Page factory---WebElements

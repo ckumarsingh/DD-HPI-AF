@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hpi.test.ParentBase.TestBase;
 
-public class ContactSupport_IdentifyProduct extends TestBase {
-	public ContactSupport_IdentifyProduct() {
+public class ContactSupport_SupportOptions extends TestBase {
+	public ContactSupport_SupportOptions() {
 		PageFactory.initElements(driver, this);
 	}
 //PageFactory--WebElements
