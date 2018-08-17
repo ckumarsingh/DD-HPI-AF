@@ -18,7 +18,7 @@ WebElement GetContinueAsGuest;
 @FindBy(xpath="//input[@value='Sign in']")
 WebElement GetSignIn;
 
-//Actions
+//Actions//
 public boolean VerifyGuestBtnDsplyd() {
 	return GetContinueAsGuest.isDisplayed();
 }
