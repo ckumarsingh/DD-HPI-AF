@@ -59,12 +59,59 @@ public Object[][] getTestdata3() {
 	return data;
 }
 
+@Test
+public void TC01AllBtnsDsplydTest () {
+	boolean S1= ContactSupport_Landing.VerifySignBtnDsplyd();
+	Assert.assertTrue(S1);
+	boolean S2= ContactSupport_Landing.VerifyPrinterBtnDsplyd();
+	Assert.assertTrue(S2);
+}
+@Test
+public void TC_PrinterLandingTest () {
+	ContactSupport_Landing.ClickPrinterIcon();
+	boolean S1=ContactSupport_ProductsLanding.VerfyDMDdsplyd();
+	Assert.assertTrue(S1);
+	boolean S2=ContactSupport_ProductsLanding.VerfyDMDEnbld();
+	Assert.assertTrue(S2);
+	boolean S3=ContactSupport_ProductsLanding.VerfyFindOutMoreLinkdsplyd();
+	Assert.assertTrue(S3);
+	boolean S4=ContactSupport_ProductsLanding.VerfySNTag();
+	Assert.assertTrue(S4);
+	boolean S5=ContactSupport_ProductsLanding.VerfySNBox();
+	Assert.assertTrue(S5);
+}
+@Test
+public void TC_ClickFndOutMoreLinkTest ( ) {
+	ContactSupport_Landing.ClickPrinterIcon();
+	String SDLink1=ContactSupport_ProductsLanding.ValidateSDPageURL();
+	Assert.assertEquals(SDLink1, "https://uat.support.hp.com/us-en/document/c05061199");
+	ContactSupport_ProductsLanding.ClickFindlink();
+	driver.get(SDLink1);
+	String SS= driver.getWindowHandle();
+	driver.switchTo().window(SS);
+	WebElement SD=driver.findElement(By.xpath("//h2[text()='Solution and Diagnostic Data Collection']"));
+	String SD1=SD.getText();
+	Assert.assertEquals(SD1, "Solution and Diagnostic Data Collection");
+}
+@Test
+public void TC_VerifySubmitBtnTest () {
+	ContactSupport_Landing.ClickPrinterIcon();
+	boolean S1=ContactSupport_ProductsLanding.VerfySbmtBtnDspld();
+	boolean S2=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld1();
+	boolean S3=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld2();
+	boolean S4=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld3();
+	Assert.assertTrue(S1);
+	Assert.assertFalse(S2);
+	Assert.assertTrue(S3);
+	Assert.assertFalse(S4);
+}
 
 
 /*@AfterMethod
 public void AllWebclose() {
 	driver.quit();	
 }*/
+
 @AfterMethod
 public void screenshot(ITestResult result) {
 	if(ITestResult.FAILURE==result.getStatus())

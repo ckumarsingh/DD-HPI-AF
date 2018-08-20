@@ -5,24 +5,9 @@
     <classes>
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
         <methods>
-          <include name="TC09_EP_PNameTest"/>
-          <include name="TC11_EP_PNTest"/>
           <include name="setup"/>
-          <include name="TC17_SN_ConOptTest"/>
-          <include name="TC06_PFindDsbledTest"/>
-          <include name="TC18_PN_ConOptBtnTest"/>
-          <include name="TC12_PN_SNTest"/>
-          <include name="TC07_PFindEnbledTest"/>
-          <include name="TC05_PfinderSBEnbldTest"/>
           <include name="screenshot"/>
-          <include name="TC08_PfinderTPvalidateTest"/>
-          <include name="TC14_SN_WDTest"/>
-          <include name="TC10_EP_SNOTest"/>
-          <include name="TC19_PN_ConOptTest"/>
-          <include name="TC04_ClickSDDLinkTest"/>
-          <include name="TC16_SN_ConOptBtnTest"/>
-          <include name="TC15_PN_WDTest"/>
-          <include name="TC13_SNTest"/>
+          <include name="TC_VerifySubmitBtnTest"/>
         </methods>
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </classes>

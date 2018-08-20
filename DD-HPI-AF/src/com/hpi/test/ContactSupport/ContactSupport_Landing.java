@@ -13,23 +13,21 @@ public class ContactSupport_Landing extends TestBase {
 			PageFactory.initElements(driver, this);
 				}
 //Page factory---WebElements
-@FindBy(id="continueAsGuest")
-WebElement GetContinueAsGuest;
-@FindBy(xpath="//input[@value='Sign in']")
+
+@FindBy(id="contactSignIn")
 WebElement GetSignIn;
+@FindBy(id="productImgDisabledprinter")
+WebElement GetPrinterIcon;
 
 //Actions//
-public boolean VerifyGuestBtnDsplyd() {
-	return GetContinueAsGuest.isDisplayed();
-}
-public boolean VerifySignInBtnDsplyd() {
+
+public boolean VerifySignBtnDsplyd() {
 	return GetSignIn.isDisplayed();
 }
-public void ClickOnGuest() {
-	GetContinueAsGuest.click();
+public boolean VerifyPrinterBtnDsplyd() {
+	return GetPrinterIcon.isDisplayed();
 }
-
-public void TestClick() {
-	GetContinueAsGuest.click();
+public void ClickPrinterIcon() {
+	GetPrinterIcon.click();
 }
 }

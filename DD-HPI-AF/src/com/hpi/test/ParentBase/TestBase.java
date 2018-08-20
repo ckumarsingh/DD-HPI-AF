@@ -27,7 +27,7 @@ public class TestBase {
 		driver = new ChromeDriver(); 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("https://support.hp.com/us-en/contact-hp");
+		driver.get("https://uat.support.hp.com/us-en/contact-hp");
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		//WebElement html = driver.findElement(By.tagName("html"));
 		//html.sendKeys(Keys.chord(Keys.COMMAND, Keys.SUBTRACT));

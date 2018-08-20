@@ -31,7 +31,7 @@ WebElement GetFindoutMoreLink;
 WebElement GetSNTag;
 @FindBy (id="search-input-pfinder")
 WebElement GetSNBox;
-@FindBy (id="btnSplitSearchSubmit")
+@FindBy (xpath="(//button[@type='submit'][@id='btnSplitSearchSubmit'])[2]")
 WebElement GetSubmitBtn;
 @FindBy (xpath="//h4[@class='col-lg-24 carouselHeading']")
 WebElement GetCarouselHead;
@@ -56,63 +56,42 @@ WebElement GetAppTag;
 @FindBy (id="btnTMSDDSubmit")
 WebElement GetOtherSubmitBtn;
 
-
 //Actions
-public String EntitlementPageTitle() {
-	String P1=GetEntitlementPageTitle.getText();
-	return P1;
-}
-public String GetSerialTitle() {
-	String T1=GetTitle4ProdctNo.getAttribute("textContent");
-	return T1;
-}
-public String GetTitle4Product() {
-	String T2=GetTitle4Serial.getText();
-	return T2;
-}
-public boolean SrnoDs() {
-	boolean B1=GetSerialNo.isDisplayed();
-	return B1;
-}
-public boolean WarrantyTagDs( ) {
-	boolean W1=GetwarrantyTag.isDisplayed();
-	return W1;
-}
-public boolean SerialTagDs() {
-	boolean S1=GetSerialNoTag.isDisplayed();
-	return S1;
-}
-public boolean ProductTag() {
-	boolean P1=GetProductNoTag.isDisplayed();
-	return P1;
-}
-public boolean ShowbtnEnld() {
-	boolean S3=GetShowButton.isEnabled();
-	return S3;
-}
 
-public void ShowButtonClick() {
-	GetShowButton.click();
+public boolean VerfyDMDdsplyd () {
+	return GetDMDButton.isDisplayed();
 }
-public void EnterSrNo(String SN) {
-	GetSerialNo.sendKeys(SN);
+public boolean VerfyDMDEnbld () {
+	return GetDMDButton.isEnabled();
 }
-public boolean PhoneSupportBtnDs () {
-	boolean PS1=GetPhoneSupport.isDisplayed();
-	return PS1;
+public boolean VerfyFindOutMoreLinkdsplyd () {
+	return GetFindoutMoreLink.isDisplayed();
 }
-public boolean EmailFormBtnDs () {
-	boolean EF1=GetEmailForm.isDisplayed();
-	return EF1;
+public void ClickFindlink () {
+	GetFindoutMoreLink.click();
 }
-public boolean ForumBtnDs () {
-	boolean F1=GetForum.isDisplayed();
-	return F1;
+public boolean VerfySNTag () {
+	return GetSNTag.isDisplayed();
 }
-public boolean ServiceCenterBtnDs () {
-	boolean SC1=GetServiceCenter.isDisplayed();
-	return SC1;
+public boolean VerfySNBox () {
+	return GetSNBox.isDisplayed();
 }
-
+public String ValidateSDPageURL() {
+	return GetFindoutMoreLink.getAttribute("href");
+}
+public boolean VerfySbmtBtnDspld () {
+	return GetSubmitBtn.isDisplayed();
+}
+public boolean VerfySbmtBtnEnbld1 () {
+	return GetSubmitBtn.isEnabled();
+}
+public boolean VerfySbmtBtnEnbld2 () {
+	GetSNBox.sendKeys("1");
+	return GetSubmitBtn.isEnabled();
+}
+public boolean VerfySbmtBtnEnbld3 () {
+	GetSNBox.clear();
+	return GetSubmitBtn.isEnabled();
+}
 }
 
