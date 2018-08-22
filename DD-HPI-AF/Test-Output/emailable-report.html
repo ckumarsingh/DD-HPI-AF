@@ -9,10 +9,52 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">24,115</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">9</td><td class="num">0</td><td class="num attn">1</td><td class="num">231,395</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution</td><td><a href="#m0">TC_VerifyPrinterProductLabel_Test</a></td><td rowspan="1">1534851306003</td><td rowspan="1">2694</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution</td><td><a href="#m0">TC_ClickFndOutMoreLink_Test</a></td><td rowspan="1">1534934979613</td><td rowspan="1">155</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution</td><td><a href="#m1">TC01AllBtnsDsplyd_Test</a></td><td rowspan="1">1534934958050</td><td rowspan="1">58</td></tr><tr class="passedeven"><td><a href="#m2">TC_DesktopLanding_Test</a></td><td rowspan="1">1534935003546</td><td rowspan="1">282</td></tr><tr class="passedeven"><td><a href="#m3">TC_LaptopLanding_Test</a></td><td rowspan="1">1534935026906</td><td rowspan="1">323</td></tr><tr class="passedeven"><td><a href="#m4">TC_PrinterLanding_Test</a></td><td rowspan="1">1534935049818</td><td rowspan="1">293</td></tr><tr class="passedeven"><td><a href="#m5">TC_PrinterSNTest</a></td><td rowspan="1">1534935161918</td><td rowspan="1">6823</td></tr><tr class="passedeven"><td><a href="#m6">TC_VerifyDesktopSubmitBtn_Test</a></td><td rowspan="1">1534935070833</td><td rowspan="1">392</td></tr><tr class="passedeven"><td><a href="#m7">TC_VerifyLaptopSubmitBtn_Test</a></td><td rowspan="1">1534935092931</td><td rowspan="1">427</td></tr><tr class="passedeven"><td><a href="#m8">TC_VerifyPrinterProductLabel_Test</a></td><td rowspan="1">1534935118288</td><td rowspan="1">2408</td></tr><tr class="passedeven"><td><a href="#m9">TC_VerifyPrinterSubmitBtn_Test</a></td><td rowspan="1">1534935142099</td><td rowspan="1">371</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_VerifyPrinterProductLabel_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_ClickFndOutMoreLink_Test</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [https://uat.support.hp.com/us-en/document/c05061199] but found [https://support.hp.com/us-en/document/c05061199]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution.TC_ClickFndOutMoreLink_Test(ContactSupport_SanityExecution.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC01AllBtnsDsplyd_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_DesktopLanding_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_LaptopLanding_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_PrinterLanding_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_PrinterSNTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>4CS34503K1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_VerifyDesktopSubmitBtn_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_VerifyLaptopSubmitBtn_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_VerifyPrinterProductLabel_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution#TC_VerifyPrinterSubmitBtn_Test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

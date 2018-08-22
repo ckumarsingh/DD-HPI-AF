@@ -5,9 +5,9 @@
     <classes>
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
         <methods>
-          <include name="TC_VerifyPrinterProductLabel_Test"/>
           <include name="setup"/>
           <include name="screenshot"/>
+          <include name="TC_ClickFndOutMoreLink_Test"/>
         </methods>
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </classes>

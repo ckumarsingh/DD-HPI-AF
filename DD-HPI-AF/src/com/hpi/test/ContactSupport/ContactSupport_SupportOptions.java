@@ -75,7 +75,5 @@ public boolean ImageDs() {
 public void ClickFind()  {
 	GetPfindBtn.click();
 }
-
-
 }
 

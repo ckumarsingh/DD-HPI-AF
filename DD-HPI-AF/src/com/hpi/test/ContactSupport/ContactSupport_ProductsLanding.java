@@ -119,4 +119,11 @@ public String VrfyLcateTitle () {
 public void ClickCancelProductlabel () {
 	GetCloseModal.click();
 }
+public void ClickSubmtBtn() {
+	GetSubmitBtn.click();
 }
+public void EnterSNNo_Data(String SerialNo) {
+	GetSNBox.sendKeys(SerialNo);
+}
+}
+

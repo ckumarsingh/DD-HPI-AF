@@ -1,25 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="10" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24115" started-at="2018-08-21T11:34:46Z" finished-at="2018-08-21T11:35:10Z">
+  <suite name="Default suite" duration-ms="231395" started-at="2018-08-22T10:48:58Z" finished-at="2018-08-22T10:52:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24115" started-at="2018-08-21T11:34:46Z" finished-at="2018-08-21T11:35:10Z">
+    <test name="Default test" duration-ms="231395" started-at="2018-08-22T10:48:58Z" finished-at="2018-08-22T10:52:49Z">
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26]" name="setup" is-config="true" duration-ms="19963" started-at="2018-08-21T11:34:46Z" finished-at="2018-08-21T11:35:06Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="19617" started-at="2018-08-22T10:48:58Z" finished-at="2018-08-22T10:49:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC_VerifyPrinterProductLabel_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26]" name="TC_VerifyPrinterProductLabel_Test" duration-ms="2694" started-at="2018-08-21T11:35:06Z" finished-at="2018-08-21T11:35:08Z">
+        <test-method status="PASS" signature="TC01AllBtnsDsplyd_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC01AllBtnsDsplyd_Test" duration-ms="58" started-at="2018-08-22T10:49:18Z" finished-at="2018-08-22T10:49:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_VerifyPrinterProductLabel_Test -->
-        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26]" name="screenshot" is-config="true" duration-ms="1416" started-at="2018-08-21T11:35:08Z" finished-at="2018-08-21T11:35:10Z">
+        </test-method> <!-- TC01AllBtnsDsplyd_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="1026" started-at="2018-08-22T10:49:18Z" finished-at="2018-08-22T10:49:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_VerifyPrinterProductLabel_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_VerifyPrinterProductLabel_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@4b553d26] output={null}]]]>
+                <![CDATA[[TestResult name=TC01AllBtnsDsplyd_Test status=SUCCESS method=ContactSupport_SanityExecution.TC01AllBtnsDsplyd_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="20476" started-at="2018-08-22T10:49:19Z" finished-at="2018-08-22T10:49:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="TC_ClickFndOutMoreLink_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_ClickFndOutMoreLink_Test" duration-ms="155" started-at="2018-08-22T10:49:39Z" finished-at="2018-08-22T10:49:39Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://uat.support.hp.com/us-en/document/c05061199] but found [https://support.hp.com/us-en/document/c05061199]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://uat.support.hp.com/us-en/document/c05061199] but found [https://support.hp.com/us-en/document/c05061199]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution.TC_ClickFndOutMoreLink_Test(ContactSupport_SanityExecution.java:87)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_ClickFndOutMoreLink_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="1505" started-at="2018-08-22T10:49:39Z" finished-at="2018-08-22T10:49:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_ClickFndOutMoreLink_Test status=FAILURE method=ContactSupport_SanityExecution.TC_ClickFndOutMoreLink_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="22267" started-at="2018-08-22T10:49:41Z" finished-at="2018-08-22T10:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_DesktopLanding_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_DesktopLanding_Test" duration-ms="282" started-at="2018-08-22T10:50:03Z" finished-at="2018-08-22T10:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_DesktopLanding_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="947" started-at="2018-08-22T10:50:03Z" finished-at="2018-08-22T10:50:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_DesktopLanding_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_DesktopLanding_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="22130" started-at="2018-08-22T10:50:04Z" finished-at="2018-08-22T10:50:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_LaptopLanding_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_LaptopLanding_Test" duration-ms="323" started-at="2018-08-22T10:50:26Z" finished-at="2018-08-22T10:50:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_LaptopLanding_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="1034" started-at="2018-08-22T10:50:27Z" finished-at="2018-08-22T10:50:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_LaptopLanding_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_LaptopLanding_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="21553" started-at="2018-08-22T10:50:28Z" finished-at="2018-08-22T10:50:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_PrinterLanding_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_PrinterLanding_Test" duration-ms="293" started-at="2018-08-22T10:50:49Z" finished-at="2018-08-22T10:50:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_PrinterLanding_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="1037" started-at="2018-08-22T10:50:50Z" finished-at="2018-08-22T10:50:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_PrinterLanding_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_PrinterLanding_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="19685" started-at="2018-08-22T10:50:51Z" finished-at="2018-08-22T10:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_VerifyDesktopSubmitBtn_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_VerifyDesktopSubmitBtn_Test" duration-ms="392" started-at="2018-08-22T10:51:10Z" finished-at="2018-08-22T10:51:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_VerifyDesktopSubmitBtn_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="942" started-at="2018-08-22T10:51:11Z" finished-at="2018-08-22T10:51:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_VerifyDesktopSubmitBtn_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_VerifyDesktopSubmitBtn_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="20762" started-at="2018-08-22T10:51:12Z" finished-at="2018-08-22T10:51:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_VerifyLaptopSubmitBtn_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_VerifyLaptopSubmitBtn_Test" duration-ms="427" started-at="2018-08-22T10:51:32Z" finished-at="2018-08-22T10:51:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_VerifyLaptopSubmitBtn_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="980" started-at="2018-08-22T10:51:33Z" finished-at="2018-08-22T10:51:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_VerifyLaptopSubmitBtn_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_VerifyLaptopSubmitBtn_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="23948" started-at="2018-08-22T10:51:34Z" finished-at="2018-08-22T10:51:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_VerifyPrinterProductLabel_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_VerifyPrinterProductLabel_Test" duration-ms="2408" started-at="2018-08-22T10:51:58Z" finished-at="2018-08-22T10:52:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_VerifyPrinterProductLabel_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="1098" started-at="2018-08-22T10:52:00Z" finished-at="2018-08-22T10:52:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_VerifyPrinterProductLabel_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_VerifyPrinterProductLabel_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="20303" started-at="2018-08-22T10:52:01Z" finished-at="2018-08-22T10:52:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_VerifyPrinterSubmitBtn_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_VerifyPrinterSubmitBtn_Test" duration-ms="371" started-at="2018-08-22T10:52:22Z" finished-at="2018-08-22T10:52:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_VerifyPrinterSubmitBtn_Test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="995" started-at="2018-08-22T10:52:22Z" finished-at="2018-08-22T10:52:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_VerifyPrinterSubmitBtn_Test status=SUCCESS method=ContactSupport_SanityExecution.TC_VerifyPrinterSubmitBtn_Test()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="setup" is-config="true" duration-ms="17945" started-at="2018-08-22T10:52:23Z" finished-at="2018-08-22T10:52:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="TC_PrinterSNTest(java.lang.String)[pri:12, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="TC_PrinterSNTest" duration-ms="6823" started-at="2018-08-22T10:52:41Z" data-provider="getTestdata1" finished-at="2018-08-22T10:52:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4CS34503K1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_PrinterSNTest -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a]" name="screenshot" is-config="true" duration-ms="1055" started-at="2018-08-22T10:52:48Z" finished-at="2018-08-22T10:52:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_PrinterSNTest status=SUCCESS method=ContactSupport_SanityExecution.TC_PrinterSNTest(java.lang.String)[pri:12, instance:com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution@78e67e0a] output={null}]]]>
               </value>
             </param>
           </params>

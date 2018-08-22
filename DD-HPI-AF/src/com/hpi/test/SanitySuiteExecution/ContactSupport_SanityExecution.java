@@ -107,7 +107,7 @@ public void TC_VerifyPrinterSubmitBtn_Test () {
 }
 @Test
 public void TC_LaptopLanding_Test () {
-	ContactSupport_Landing.ClickPrinterIcon();
+	ContactSupport_Landing.ClickLaptopIcon();
 	boolean S1=ContactSupport_ProductsLanding.VerfyDMDdsplyd();
 	Assert.assertTrue(S1);
 	boolean S2=ContactSupport_ProductsLanding.VerfyDMDEnbld();
@@ -121,7 +121,7 @@ public void TC_LaptopLanding_Test () {
 }
 @Test
 public void TC_DesktopLanding_Test () {
-	ContactSupport_Landing.ClickPrinterIcon();
+	ContactSupport_Landing.ClickDesktopIcon();
 	boolean S1=ContactSupport_ProductsLanding.VerfyDMDdsplyd();
 	Assert.assertTrue(S1);
 	boolean S2=ContactSupport_ProductsLanding.VerfyDMDEnbld();
@@ -135,7 +135,7 @@ public void TC_DesktopLanding_Test () {
 }
 @Test
 public void TC_VerifyLaptopSubmitBtn_Test () {
-	ContactSupport_Landing.ClickPrinterIcon();
+	ContactSupport_Landing.ClickLaptopIcon();
 	boolean S1=ContactSupport_ProductsLanding.VerfySbmtBtnDspld();
 	boolean S2=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld1();
 	boolean S3=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld2();
@@ -147,7 +147,7 @@ public void TC_VerifyLaptopSubmitBtn_Test () {
 }
 @Test
 public void TC_VerifyDesktopSubmitBtn_Test () {
-	ContactSupport_Landing.ClickPrinterIcon();
+	ContactSupport_Landing.ClickDesktopIcon();
 	boolean S1=ContactSupport_ProductsLanding.VerfySbmtBtnDspld();
 	boolean S2=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld1();
 	boolean S3=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld2();
@@ -157,7 +157,6 @@ public void TC_VerifyDesktopSubmitBtn_Test () {
 	Assert.assertTrue(S3);
 	Assert.assertFalse(S4);
 }
-
 @Test
 public void TC_VerifyPrinterProductLabel_Test() throws InterruptedException {
 	ContactSupport_Landing.ClickPrinterIcon();
@@ -169,7 +168,18 @@ public void TC_VerifyPrinterProductLabel_Test() throws InterruptedException {
 	Assert.assertEquals(S2, "Find your serial number by locating the product label");
 	ContactSupport_ProductsLanding.ClickCancelProductlabel();
 }
-
+@Test(priority=12,dataProvider="getTestdata1")
+public void TC_PrinterSNTest(String SerialNo) {
+		ContactSupport_Landing.ClickPrinterIcon();
+		ContactSupport_ProductsLanding.EnterSNNo_Data(SerialNo);
+		ContactSupport_ProductsLanding.ClickSubmtBtn();
+		//String T1= ContactSupport_SupportOptions.GetTitle4Product();
+		//Assert.assertEquals(T1, "");
+		//Assert.assertTrue(T1);
+		//System.out.println(T1);
+		//boolean B3=ContactSupport_SupportOptions.SrnoDs();
+		//Assert.assertFalse(B3);
+}
 
 /*@AfterMethod
 public void AllWebclose() {
