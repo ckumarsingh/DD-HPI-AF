@@ -46,7 +46,7 @@ WebElement GetVideoLinkDesktop;
 @FindBy (id="tooltip_video_others")
 WebElement GetVideoOthers;
 @FindBy (id="contact_tooltip_keyboard_desktop")
-WebElement GetKeyBoardlablel;
+WebElement GetKeyBoardlabel;
 @FindBy (xpath="//h4[@class='col-lg-24 carouselHeading']")
 WebElement GetCarouselHeadOthers;
 @FindBy (xpath="//h4[@class='col-lg-21 swdPfinderTitle swdPfinderTitle-with-DMD']")
@@ -55,7 +55,12 @@ WebElement GetSPPTag;
 WebElement GetAppTag;
 @FindBy (id="btnTMSDDSubmit")
 WebElement GetOtherSubmitBtn;
-
+@FindBy(id="laptop-prod-info-modal-main-heading")
+WebElement GetPrdtLptopHeading;
+@FindBy(xpath="(//button[@aria-label='Close'][@data-dismiss='modal'][@class='close icon'])[3]")
+WebElement GetCloseModal;
+@FindBy(id="printer-prod-info-modal-main-heading")
+WebElement GetPrdtPrinterHeading;
 //Actions
 
 public boolean VerfyDMDdsplyd () {
@@ -93,5 +98,25 @@ public boolean VerfySbmtBtnEnbld3 () {
 	GetSNBox.clear();
 	return GetSubmitBtn.isEnabled();
 }
+public void ClickKeyBoard () {
+	GetKeyBoardlabel.click();
 }
-
+public String VerifyKeyboardDsplyd () {
+	String S1=GetKeyBoardlabel.getText();
+	return S1;
+}
+public String VerfyProductLabel () {
+	String S2=GetLabelProductInfo.getText();
+	return S2;
+}
+public void ClickProductLabel () {
+	GetLabelProductInfo.click();
+}
+public String VrfyLcateTitle () {
+	String S1=GetPrdtPrinterHeading.getText();
+	return S1;
+}
+public void ClickCancelProductlabel () {
+	GetCloseModal.click();
+}
+}

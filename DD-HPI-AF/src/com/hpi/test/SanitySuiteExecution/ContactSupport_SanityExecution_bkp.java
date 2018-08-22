@@ -84,7 +84,7 @@ public void TC03_ValidateIdntfyNwBtnTest() {
 @Test(priority=3)
 public void TC04_ClickSDDLinkTest()  {
 	ContactSupport_IdentifyLanding.ClickOnGuest();
-	((JavascriptExecutor)driver).executeScript("scroll(0,200)");
+	((JavascriptExecutor)driver).executeScript("click(0,200)");
 	String SDLink1=ContactSupport_IdentifyProduct.ValidateSDPageURL();
 	Assert.assertEquals(SDLink1, "https://uat.support.hp.com/us-en/document/c05061199");
 	ContactSupport_IdentifyProduct.ClickWikiHowLink();

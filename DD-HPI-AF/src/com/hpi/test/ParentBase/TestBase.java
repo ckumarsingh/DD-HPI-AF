@@ -23,11 +23,11 @@ public class TestBase {
 	public static WebDriver driver;	
 	public static void initialization(){
 		System.setProperty("webdriver.chrome.driver", "./Browser-servers/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ckumarsingh\\Downloads\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\ckumarsingh\\Downloads\\chromedriver.exe");
 		driver = new ChromeDriver(); 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("https://uat.support.hp.com/us-en/contact-hp");
+		driver.get("https://support.hp.com/us-en/contact-hp");
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		//WebElement html = driver.findElement(By.tagName("html"));
 		//html.sendKeys(Keys.chord(Keys.COMMAND, Keys.SUBTRACT));

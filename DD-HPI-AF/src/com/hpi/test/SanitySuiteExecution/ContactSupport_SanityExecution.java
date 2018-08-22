@@ -60,14 +60,14 @@ public Object[][] getTestdata3() {
 }
 
 @Test
-public void TC01AllBtnsDsplydTest () {
+public void TC01AllBtnsDsplyd_Test () {
 	boolean S1= ContactSupport_Landing.VerifySignBtnDsplyd();
 	Assert.assertTrue(S1);
 	boolean S2= ContactSupport_Landing.VerifyPrinterBtnDsplyd();
 	Assert.assertTrue(S2);
 }
 @Test
-public void TC_PrinterLandingTest () {
+public void TC_PrinterLanding_Test () {
 	ContactSupport_Landing.ClickPrinterIcon();
 	boolean S1=ContactSupport_ProductsLanding.VerfyDMDdsplyd();
 	Assert.assertTrue(S1);
@@ -81,7 +81,7 @@ public void TC_PrinterLandingTest () {
 	Assert.assertTrue(S5);
 }
 @Test
-public void TC_ClickFndOutMoreLinkTest ( ) {
+public void TC_ClickFndOutMoreLink_Test ( ) {
 	ContactSupport_Landing.ClickPrinterIcon();
 	String SDLink1=ContactSupport_ProductsLanding.ValidateSDPageURL();
 	Assert.assertEquals(SDLink1, "https://uat.support.hp.com/us-en/document/c05061199");
@@ -94,7 +94,7 @@ public void TC_ClickFndOutMoreLinkTest ( ) {
 	Assert.assertEquals(SD1, "Solution and Diagnostic Data Collection");
 }
 @Test
-public void TC_VerifySubmitBtnTest () {
+public void TC_VerifyPrinterSubmitBtn_Test () {
 	ContactSupport_Landing.ClickPrinterIcon();
 	boolean S1=ContactSupport_ProductsLanding.VerfySbmtBtnDspld();
 	boolean S2=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld1();
@@ -104,6 +104,70 @@ public void TC_VerifySubmitBtnTest () {
 	Assert.assertFalse(S2);
 	Assert.assertTrue(S3);
 	Assert.assertFalse(S4);
+}
+@Test
+public void TC_LaptopLanding_Test () {
+	ContactSupport_Landing.ClickPrinterIcon();
+	boolean S1=ContactSupport_ProductsLanding.VerfyDMDdsplyd();
+	Assert.assertTrue(S1);
+	boolean S2=ContactSupport_ProductsLanding.VerfyDMDEnbld();
+	Assert.assertTrue(S2);
+	boolean S3=ContactSupport_ProductsLanding.VerfyFindOutMoreLinkdsplyd();
+	Assert.assertTrue(S3);
+	boolean S4=ContactSupport_ProductsLanding.VerfySNTag();
+	Assert.assertTrue(S4);
+	boolean S5=ContactSupport_ProductsLanding.VerfySNBox();
+	Assert.assertTrue(S5);
+}
+@Test
+public void TC_DesktopLanding_Test () {
+	ContactSupport_Landing.ClickPrinterIcon();
+	boolean S1=ContactSupport_ProductsLanding.VerfyDMDdsplyd();
+	Assert.assertTrue(S1);
+	boolean S2=ContactSupport_ProductsLanding.VerfyDMDEnbld();
+	Assert.assertTrue(S2);
+	boolean S3=ContactSupport_ProductsLanding.VerfyFindOutMoreLinkdsplyd();
+	Assert.assertTrue(S3);
+	boolean S4=ContactSupport_ProductsLanding.VerfySNTag();
+	Assert.assertTrue(S4);
+	boolean S5=ContactSupport_ProductsLanding.VerfySNBox();
+	Assert.assertTrue(S5);
+}
+@Test
+public void TC_VerifyLaptopSubmitBtn_Test () {
+	ContactSupport_Landing.ClickPrinterIcon();
+	boolean S1=ContactSupport_ProductsLanding.VerfySbmtBtnDspld();
+	boolean S2=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld1();
+	boolean S3=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld2();
+	boolean S4=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld3();
+	Assert.assertTrue(S1);
+	Assert.assertFalse(S2);
+	Assert.assertTrue(S3);
+	Assert.assertFalse(S4);
+}
+@Test
+public void TC_VerifyDesktopSubmitBtn_Test () {
+	ContactSupport_Landing.ClickPrinterIcon();
+	boolean S1=ContactSupport_ProductsLanding.VerfySbmtBtnDspld();
+	boolean S2=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld1();
+	boolean S3=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld2();
+	boolean S4=ContactSupport_ProductsLanding.VerfySbmtBtnEnbld3();
+	Assert.assertTrue(S1);
+	Assert.assertFalse(S2);
+	Assert.assertTrue(S3);
+	Assert.assertFalse(S4);
+}
+
+@Test
+public void TC_VerifyPrinterProductLabel_Test() throws InterruptedException {
+	ContactSupport_Landing.ClickPrinterIcon();
+	String S1=ContactSupport_ProductsLanding.VerfyProductLabel();
+	Assert.assertEquals(S1, "Locate your product's information label");
+	ContactSupport_ProductsLanding.ClickProductLabel();
+	Thread.sleep(2000);
+	String S2=ContactSupport_ProductsLanding.VrfyLcateTitle();
+	Assert.assertEquals(S2, "Find your serial number by locating the product label");
+	ContactSupport_ProductsLanding.ClickCancelProductlabel();
 }
 
 
