@@ -61,6 +61,7 @@ WebElement GetPrdtLptopHeading;
 WebElement GetCloseModal;
 @FindBy(id="printer-prod-info-modal-main-heading")
 WebElement GetPrdtPrinterHeading;
+
 //Actions
 
 public boolean VerfyDMDdsplyd () {
@@ -112,7 +113,7 @@ public String VerfyProductLabel () {
 public void ClickProductLabel () {
 	GetLabelProductInfo.click();
 }
-public String VrfyLcateTitle () {
+public String VrfyLcatePrdtTitle () {
 	String S1=GetPrdtPrinterHeading.getText();
 	return S1;
 }
@@ -125,5 +126,11 @@ public void ClickSubmtBtn() {
 public void EnterSNNo_Data(String SerialNo) {
 	GetSNBox.sendKeys(SerialNo);
 }
+public String VerifyProdctTitle () {
+	String S1= GetProductTitle.getText();
+	return S1;
 }
-
+public void EnterPNNo_Data(String ProductNo) {
+	GetSNBox.sendKeys(ProductNo);
+}
+}

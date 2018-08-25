@@ -5,9 +5,16 @@
     <classes>
       <class name="com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution">
         <methods>
+          <include name="TC_VerifyPrinterProductLabel_Test"/>
           <include name="setup"/>
-          <include name="screenshot"/>
+          <include name="TC_PrinterPNo_Test" invocation-numbers="0 1"/>
+          <include name="TC_PrinterPName_Test" invocation-numbers="0 1"/>
+          <include name="TC_VerifyLaptopSubmitBtn_Test"/>
+          <include name="TC_PrinterLanding_Test"/>
+          <include name="TC_PrinterSN_Test"/>
+          <include name="TC_VerifyPrinterSubmitBtn_Test"/>
           <include name="TC_ClickFndOutMoreLink_Test"/>
+          <include name="TC_VerifyDesktopSubmitBtn_Test"/>
         </methods>
       </class> <!-- com.hpi.test.SanitySuiteExecution.ContactSupport_SanityExecution -->
     </classes>

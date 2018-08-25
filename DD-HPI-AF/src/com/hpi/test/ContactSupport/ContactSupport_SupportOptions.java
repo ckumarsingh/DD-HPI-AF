@@ -11,69 +11,72 @@ public class ContactSupport_SupportOptions extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 //PageFactory--WebElements
-@FindBy(xpath="//h2[text()='Contact Support - Start by identifying your products']")
-	WebElement GetPageTitle;
-@FindBy(id="detectNow")
-	WebElement GetIdentifyNow;
-@FindBy(linkText="How does HP use product data collected with this service?")
-	WebElement GetProductWikiDoc;
-@FindBy(xpath="//input[@id='search-input-pfinder']")
-	WebElement GetPfinderSB;
-@FindBy(xpath="(//button[@id='btnSplitSearchSubmit'])[2]")
-	WebElement GetPfindBtn;
-@FindBy(id="tooltipPadPfinder")
-	WebElement GetTooltipPfinder;
-@FindBy(xpath="//h3[@id='serial-number-modal-main-heading']")
-	WebElement GetPfindrTPTitle;
-@FindBy(xpath="//img[contains(@alt,'Product Number')]")
-	WebElement GetImageProNo;
-
-
+@FindBy(xpath="//h1[text()='How can we help you?']")
+WebElement GetSupportHelpTitle;	
+@FindBy(xpath="//img[contains(@alt,'product information')]")
+WebElement GetProductImage;	
+@FindBy(id="prodInfoTitle")
+WebElement GetProductInfoTitle;	
+@FindBy(id="changeProductTrigger")
+WebElement GetChangeProductLink;	
+@FindBy(id="status-key")
+WebElement GetWarrantyStatusText;	
+@FindBy(id="warrantyTypeModal")
+WebElement GetTooltipIcon;	
+@FindBy(id="lnkOWResult")
+WebElement GetSeeDetailsLink;	
+@FindBy(xpath="//span[text()='Serial number:']")
+WebElement GetSerialNumText;	
+@FindBy(id="piSerialNum")
+WebElement GetSerialNum;	
+@FindBy(xpath="//span[text()='Product number:']")
+WebElement GetProductNumText;	
+@FindBy(id="piProdNum")
+WebElement GetProdNum;	
+@FindBy(xpath="//img[@class='addIcon']")
+WebElement GetAddIcon;	
+@FindBy(xpath="//img[@class='addBtnTxt']")
+WebElement GetAddProdText;
+	
 //Actions
-public String ValidatePageTitle() {
-	String ActualTitle=GetPageTitle.getText();
-	return ActualTitle;
-}
-public void ClickWikiHowLink() {
-	//scrollIntoView(waitForElement(GetProductWikiDoc.click()));
-	GetProductWikiDoc.click();
-}
-public boolean ValidateIdntfyNowBtnEn() {
-	boolean IDnEn= GetIdentifyNow.isEnabled();
-	return IDnEn;
-}
-public boolean ValidateIdntfyNowBtnDs() {
-	boolean IDnDs= GetIdentifyNow.isDisplayed();
-	return IDnDs;
-}
-public String ValidateSDPageURL() {
-	String SDLink=GetProductWikiDoc.getAttribute("href");
-	return SDLink;
-}
-public boolean PfinderSBDs() {
-	boolean PFDs=GetPfinderSB.isEnabled();
-	return PFDs;
-}
-public boolean ValidatePfindBtnEn() {
-	boolean PfindFlag=GetPfindBtn.isEnabled();
-	return PfindFlag;
-}
-public void EnterProductPfind(String Prdtdtls) {
-	GetPfinderSB.sendKeys(Prdtdtls);
-}
-public void ClickTPPfinder() {
-	GetTooltipPfinder.click();
-}
-public String PfinderTPT ( ) {
-	String TT=GetPfindrTPTitle.getText();
-	return TT;
-}
-public boolean ImageDs() { 
-	Boolean Image1 =GetImageProNo.isDisplayed();
-	return Image1;
-}
-public void ClickFind()  {
-	GetPfindBtn.click();
-}
-}
+public String VerifySupportHelpTitle() {
+	  return GetSupportHelpTitle.getText();
+	}
+public boolean VerifyProductImage() {
+	  return GetProductImage.isDisplayed();
+	}
+public String VerifyProductInfoTitle() {
+	  return GetProductInfoTitle.getText();
+	}
+public boolean VerifyChangeProductLink() {
+	  return GetChangeProductLink.isDisplayed();
+	}
+public boolean VerifyWarrantyStatusText() {
+	  return GetWarrantyStatusText.isDisplayed();
+	}
+public boolean VerifyTooltipIcon() {
+	  return GetTooltipIcon.isDisplayed();
+	}
+public boolean VerifySeeDetailsLink() {
+	  return GetSeeDetailsLink.isDisplayed();
+	}
+public boolean VerifySerialNumText() {
+	  return GetSerialNumText.isDisplayed();
+	}
+public boolean VerifyProductNumText() {
+	  return GetProductNumText.isDisplayed();
+	}
+public String VerifyProdNum() {
+	  return GetProdNum.getText();
+	}
+public String VerifySerialNum() {
+	  return GetSerialNum.getText();
+	}
+public boolean VerifyAddIcon() {
+	  return GetAddIcon.isDisplayed();
+	}
+public boolean VerifyAddProdText() {
+	  return GetAddProdText.isDisplayed();
+	}
 
+}
